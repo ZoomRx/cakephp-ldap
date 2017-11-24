@@ -1,0 +1,23 @@
+{
+    "name": "zoomrx/cakephp-ldap",
+    "description": "LdapUtility plugin for CakePHP 3.x",
+    "type": "cakephp-plugin",
+    "require": {
+        "php": ">=5.4.16",
+        "cakephp/cakephp": ">=3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "LdapUtility\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LdapUtility\\Test\\": "tests",
+            "Cake\\Test\\": "./vendor/cakephp/cakephp/tests"
+        }
+    }
+}
