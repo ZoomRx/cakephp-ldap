@@ -73,7 +73,7 @@ Parameters for setting LDAP authentication has all the parameters of LDAP handle
         $this->loadComponent('Auth', [
             'storage' => 'Memory',
             'authenticate', [
-                LdapUtility/Ldap => [
+                LdapUtility.Ldap => [
 					'host' => 'ldap.example.com',
 			        'port' => 389,
 			        'baseDn' => 'dc=example,dc=com',
@@ -101,6 +101,7 @@ Parameters for setting LDAP authentication has all the parameters of LDAP handle
 | --------- | ----------- |
 | `auth.searchFilter` | Search filter syntax with username placeholder. The placeholder will be replaced by username data from request. This is used to read LDAP data entry of the authenticated user |
 | `auth.bindDn` | Bind DN syntax with username placeholder between braces. The placeholder will be replaced by username data from request |
+| `auth.callback` | Callback function that will execute after fetching details from app datasource. Both LDAP details array and app user details array will be passed as arguments. If user has no record in app datasource, user details array will be false. Callback will be called only if queryDatasource is true |
 | `queryDataSource` | Boolean to decide whether to query app datasource after successful LDAP authentication |
 | `userModel` | If queryDataSource is set, userModel table will be used for base authentication |
 | `fields.username` | If queryDataSource is set, authenticate class will use field.username as field condition for base authentication |

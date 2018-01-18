@@ -229,7 +229,7 @@ class Ldap
      */
     protected function checkForRoleSuffix($username)
     {
-        return (preg_match('/[a-zA-Z0-9]*.[a-zA-Z0-9]*\+[a-zA-Z0-9]+$/', $username));
+        return (preg_match('/^[a-zA-Z0-9]+\.[a-zA-Z0-9]+\+[a-zA-Z0-9]+$/', $username));
     }
 
     /**
