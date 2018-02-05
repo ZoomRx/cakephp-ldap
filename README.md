@@ -73,7 +73,7 @@ Parameters for setting LDAP authentication has all the parameters of LDAP handle
         $this->loadComponent('Auth', [
             'storage' => 'Memory',
             'authenticate', [
-                LdapUtility.Ldap => [
+                'LdapUtility.Ldap' => [
 					'host' => 'ldap.example.com',
 			        'port' => 389,
 			        'baseDn' => 'dc=example,dc=com',
