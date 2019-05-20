@@ -167,7 +167,7 @@ class Ldap
             $user = $this->find('read', [
                 'baseDn' => $bindDn,
                 'filter' => $rDn,
-                'attributes' => ['cn', 'sn', 'mail']
+                'attributes' => ['cn', 'sn', 'mail', 'businessCategory']
             ]);
 
             if ($user['count'] == 0) {
